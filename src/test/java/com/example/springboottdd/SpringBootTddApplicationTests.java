@@ -43,7 +43,7 @@ class SpringBootTddApplicationTests {
             .andExpect(
                 content().json("""
                   [
-                    { "white": "Tigran Petrosian", "black":  "Wolfgang Unzicker"}
+                    { "white": "Tigran Petrosian", "black":  "Wolfgang Unzicker", "date":  "1960-08-04"}
                   ]
                   """)
             );

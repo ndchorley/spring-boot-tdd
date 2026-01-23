@@ -1,3 +1,5 @@
 package com.example.springboottdd;
 
-public record Game(String white, String black) {}
+import java.time.LocalDate;
+
+public record Game(String white, String black, LocalDate date) {}
