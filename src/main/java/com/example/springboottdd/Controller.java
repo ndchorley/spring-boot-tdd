@@ -12,7 +12,7 @@ public class Controller {
     private final ArrayList<Game> games = new ArrayList<>();
 
     @GetMapping("/")
-    public List<Game> root() {
+    public List<Game> listGames() {
         return games;
     }
 
