@@ -11,13 +11,17 @@ import static org.springframework.http.HttpStatus.*;
 public class Controller {
     class Repository {
          final ArrayList<Game> games = new ArrayList<>();
+
+        public List<Game> allGames() {
+            return games;
+        }
     }
 
     private final Repository repository = new Repository();
 
     @GetMapping("/")
     public List<Game> listGames() {
-        return repository.games;
+        return repository.allGames();
     }
 
     @PostMapping("/")
