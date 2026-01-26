@@ -9,16 +9,20 @@ import static org.springframework.http.HttpStatus.*;
 
 @RestController
 public class Controller {
-    private final ArrayList<Game> games = new ArrayList<>();
+    class Repository {
+         final ArrayList<Game> games = new ArrayList<>();
+    }
+
+    private final Repository repository = new Repository();
 
     @GetMapping("/")
     public List<Game> listGames() {
-        return games;
+        return repository.games;
     }
 
     @PostMapping("/")
     @ResponseStatus(CREATED)
     public void addGame(@RequestBody Game newGame) {
-        games.add(newGame);
+        repository.games.add(newGame);
     }
 }
