@@ -6,5 +6,6 @@ public record Game(
     String white,
     String black,
     LocalDate date,
-    Result result
+    Result result,
+    String moves
 ) {}
