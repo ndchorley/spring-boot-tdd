@@ -15,6 +15,10 @@ public class Controller {
         public List<Game> allGames() {
             return games;
         }
+
+        public void add(Game newGame) {
+            games.add(newGame);
+        }
     }
 
     private final Repository repository = new Repository();
@@ -27,6 +31,6 @@ public class Controller {
     @PostMapping("/")
     @ResponseStatus(CREATED)
     public void addGame(@RequestBody Game newGame) {
-        repository.games.add(newGame);
+        repository.add(newGame);
     }
 }
