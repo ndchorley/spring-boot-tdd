@@ -10,7 +10,7 @@ import static org.springframework.http.HttpStatus.*;
 @RestController
 public class Controller {
     class Repository {
-         final ArrayList<Game> games = new ArrayList<>();
+        private final ArrayList<Game> games = new ArrayList<>();
 
         public List<Game> allGames() {
             return games;
