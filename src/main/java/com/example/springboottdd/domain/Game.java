@@ -1,4 +1,4 @@
-package com.example.springboottdd;
+package com.example.springboottdd.domain;
 
 import java.time.LocalDate;
 

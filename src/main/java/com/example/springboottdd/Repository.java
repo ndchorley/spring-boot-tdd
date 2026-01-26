@@ -1,5 +1,6 @@
 package com.example.springboottdd;
 
+import com.example.springboottdd.domain.Game;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
