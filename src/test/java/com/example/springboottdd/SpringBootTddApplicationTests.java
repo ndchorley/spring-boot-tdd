@@ -18,14 +18,14 @@ class SpringBootTddApplicationTests {
     private MockMvc mvc;
 
     @Test
-    void it_returns_an_empty_list() throws Exception {
+    void when_there_are_no_games_it_returns_an_empty_list() throws Exception {
         mvc.perform(get("/"))
             .andExpect(status().isOk())
             .andExpect(content().json("[]"));
     }
     
     @Test
-    void a_game_can_be_added() throws Exception {
+    void a_game_that_has_been_added_can_be_retrieved() throws Exception {
         mvc.perform(
             post("/")
                 .contentType("application/json")
