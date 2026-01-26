@@ -8,7 +8,11 @@ import static org.springframework.http.HttpStatus.*;
 
 @RestController
 public class Controller {
-    private final Repository repository = new Repository();
+    private final Repository repository;
+
+    public Controller(Repository repository) {
+        this.repository = repository;
+    }
 
     @GetMapping("/")
     public List<Game> listGames() {
