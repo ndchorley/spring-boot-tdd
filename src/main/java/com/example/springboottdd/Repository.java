@@ -1,20 +1,11 @@
 package com.example.springboottdd;
 
 import com.example.springboottdd.domain.Game;
-import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 
-@Component
-public class Repository {
-    private final ArrayList<Game> games = new ArrayList<>();
+public interface Repository {
+    void add(Game newGame);
 
-    public List<Game> allGames() {
-        return games;
-    }
-
-    public void add(Game newGame) {
-        games.add(newGame);
-    }
+    List<Game> allGames();
 }
