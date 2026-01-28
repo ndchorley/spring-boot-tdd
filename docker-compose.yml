@@ -1,0 +1,8 @@
+services:
+  test-db:
+    image: postgres:18.1
+    environment:
+      POSTGRES_USER: "api"
+      POSTGRES_PASSWORD: "api123"
+    ports:
+      - "5432:5432"
