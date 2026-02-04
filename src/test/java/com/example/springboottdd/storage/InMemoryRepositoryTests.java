@@ -1,4 +1,4 @@
-package com.example.springboottdd;
+package com.example.springboottdd.storage;
 
 public class InMemoryRepositoryTests extends RepositoryContract {
     public InMemoryRepositoryTests() {

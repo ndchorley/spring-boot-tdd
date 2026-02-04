@@ -1,4 +1,4 @@
-package com.example.springboottdd;
+package com.example.springboottdd.storage;
 
 import com.example.springboottdd.domain.Game;
 

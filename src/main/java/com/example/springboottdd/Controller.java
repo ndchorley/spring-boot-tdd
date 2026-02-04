@@ -1,6 +1,7 @@
 package com.example.springboottdd;
 
 import com.example.springboottdd.domain.Game;
+import com.example.springboottdd.storage.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

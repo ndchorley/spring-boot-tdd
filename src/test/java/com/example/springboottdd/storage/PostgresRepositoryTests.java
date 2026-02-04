@@ -1,4 +1,4 @@
-package com.example.springboottdd;
+package com.example.springboottdd.storage;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.postgresql.ds.PGSimpleDataSource;
