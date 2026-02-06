@@ -22,15 +22,8 @@ public class PostgresRepository implements Repository {
             statement.setString(1, newGame.white());
             statement.setString(2, newGame.black());
             statement.setDate(3, Date.valueOf(newGame.date()));
-            
-            var resultString =
-                switch (newGame.result()) {
-                    case WHITE_WON -> "1-0";
-                    case DRAW -> "1/2-1/2";
-                    case BLACK_WON -> "0-1";
-                };
-            
-            statement.setString(4, resultString);
+
+            statement.setString(4, newGame.result().toString());
             statement.setString(5, newGame.moves());
             
             statement.execute();
