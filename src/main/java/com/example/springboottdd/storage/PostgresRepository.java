@@ -1,6 +1,7 @@
 package com.example.springboottdd.storage;
 
 import com.example.springboottdd.domain.Game;
+import com.example.springboottdd.domain.Result;
 import org.flywaydb.core.Flyway;
 import org.postgresql.ds.PGSimpleDataSource;
 
@@ -46,16 +47,7 @@ public class PostgresRepository implements Repository {
                 var white = queryResults.getString("white");
                 var black = queryResults.getString("black");
                 var date = queryResults.getDate("date").toLocalDate();
-                
-                var result =
-                    switch (queryResults.getString("result")) {
-                        case "1-0" -> WHITE_WON;
-                        case "1/2-1/2" -> DRAW;
-                        case "0-1" -> BLACK_WON;
-                        
-                        default -> 
-                            throw new IllegalStateException("Unexpected value: " + queryResults.getString("result"));
-                };
+                var result = Result.from(queryResults.getString("result"));;
                 
                 var moves = queryResults.getString("moves");
                 

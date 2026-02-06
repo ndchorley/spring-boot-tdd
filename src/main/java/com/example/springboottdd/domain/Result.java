@@ -7,6 +7,17 @@ public enum Result {
     @JsonProperty("1/2-1/2") DRAW("1/2-1/2"),
     @JsonProperty("0-1") BLACK_WON("0-1");
     
+    public static Result from(String textValue) {
+        return switch (textValue) {
+            case "1-0" -> WHITE_WON;
+            case "1/2-1/2" -> DRAW;
+            case "0-1" -> BLACK_WON;
+
+            default ->
+                throw new IllegalStateException("Unexpected value: " + textValue);
+        };
+    }
+    
     Result(String textValue) {
         this.textValue = textValue;
     }
