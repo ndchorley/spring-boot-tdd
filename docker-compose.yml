@@ -6,3 +6,11 @@ services:
       POSTGRES_PASSWORD: "api123"
     ports:
       - "5432:5432"
+
+  app-db:
+    image: postgres:18.1
+    environment:
+      POSTGRES_USER: "app"
+      POSTGRES_PASSWORD: "app456"
+    ports:
+      - "5433:5432"
