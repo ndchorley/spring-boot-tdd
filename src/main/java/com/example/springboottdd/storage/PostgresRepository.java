@@ -11,8 +11,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.example.springboottdd.domain.Result.*;
-
 public class PostgresRepository implements Repository {
     @Override
     public void add(Game newGame) {
