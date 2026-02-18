@@ -26,7 +26,8 @@ dependencies {
     
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
     testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:6.0.3")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:6.0.3")
     testImplementation("org.assertj:assertj-core:3.27.7")
 }
 
