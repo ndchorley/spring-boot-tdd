@@ -1,5 +1,6 @@
-package com.example.springboottdd.storage;
+package com.example.springboottdd.unit.storage;
 
+import com.example.springboottdd.storage.PostgresRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.postgresql.ds.PGSimpleDataSource;
 

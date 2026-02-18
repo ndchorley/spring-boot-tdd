@@ -1,6 +1,7 @@
-package com.example.springboottdd.storage;
+package com.example.springboottdd.unit.storage;
 
 import com.example.springboottdd.domain.Game;
+import com.example.springboottdd.storage.Repository;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

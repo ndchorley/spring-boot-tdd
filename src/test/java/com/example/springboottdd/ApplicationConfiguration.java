@@ -1,6 +1,6 @@
 package com.example.springboottdd;
 
-import com.example.springboottdd.storage.InMemoryRepository;
+import com.example.springboottdd.unit.storage.InMemoryRepository;
 import com.example.springboottdd.storage.Repository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
